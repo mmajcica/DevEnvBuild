@@ -1,0 +1,32 @@
+{
+  "name": "mmajcica.DevEnvBuild",
+  "version": "0.1.0",
+  "description": "Build task for TFS/VSTS that will allow you to build your projects using devenv.com executable",
+  "author": "Mario Majcica",
+  "license": "MIT",
+  "homepage": "https://github.com/mmajcica/DevEnvBuild#readme",
+  "bugs": {
+    "url": "https://github.com/mmajcica/DevEnvBuild/issues"
+  },
+  "keywords": [
+    "build",
+    "visualstudio",
+    "devenv",
+    "devenv.com",
+    "ispac",
+    "ssrs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmajcica/DevEnvBuild.git"
+  },
+  "devDependencies": {
+    "del": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-debug": "^2.1.2",
+    "gulp-util": "^3.0.0",
+    "merge-stream": "^1.0.0",
+    "shelljs": "^0.3.0",
+    "minimist": "1.1.1"
+  }
+}
