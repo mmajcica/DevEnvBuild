@@ -3,7 +3,7 @@
   "name": "DevEnvBuild",
   "friendlyName": "DevEnv build (Visual Studio)",
   "description": "Build a project via the visual studio command-line invocation, devenv.cmd",
-  "author": "Rabobank WRR",
+  "author": "Mario Majcica",
   "helpMarkDown": "Build your project via the visual studio command-line invocation, devenv.cmd",
   "category": "Build",
   "visibility": [
@@ -29,20 +29,20 @@
       "helpMarkDown": "Project to build"
     },
     {
-      "name": "buildPlatform",
-      "type": "string",
-      "label": "Platform",
-      "defaultValue": "",
-      "required": false,
-      "helpMarkDown": "Build platform; only applied when a configuration is specified. Leave blank for solution default."
-    },
-    {
       "name": "buildCfg",
       "type": "string",
       "label": "Configuration",
       "defaultValue": "",
       "required": false,
       "helpMarkDown": "Build configuration; leave blank for solution default."
+    },
+    {
+      "name": "buildPlatform",
+      "type": "string",
+      "label": "Platform",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "Build platform; only applied when a configuration is specified. Leave blank for solution default."
     },
     {
       "name": "vsVersion",

@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
   "extensionId": "devenv-build",
-  "name": "Build with devenv",
+  "name": "Build with devenv (Visual Studio)",
   "version": "1.0.0",
   "publisher": "mmajcica",
   "description": "Build a project using devenv.com",
@@ -22,14 +22,14 @@
     "devenv",
     "devenv.com",
     "ispac",
-    "ssrs"
+    "ssis"
   ],
   "links": {
     "home": {
       "uri": "http://blog.majcica.com/"
     },
     "support": {
-      "uri": "http://blog.majcica.com/2018/02/26/deploy-ssis-packages-from-tfs-vsts-build-release/"
+      "uri": "http://blog.majcica.com/2018/04/25/deploy-ssis-packages-from-tfs-vsts-build-release/"
     },
     "repository": {
         "uri": "https://github.com/mmajcica/DevEnvBuild"
@@ -48,7 +48,7 @@
   },
   "screenshots": [
     {
-        "path": "images/ssis-task.png"
+        "path": "images/task-screenshot.png"
     }
   ],
   "content": {
