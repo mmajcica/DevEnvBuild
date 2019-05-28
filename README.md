@@ -8,9 +8,10 @@ This extension will add a build task in your TFS/VSTS instance that will allow y
 
 The desired Visual Studio version needs to be present on your build server.
 
-### The different parameters of the task are explained below:
+### The different parameters of the task are explained below
 
-* **Project**: Solution or project that you intend to build.
+* **Solution / Project**: Solution or Project to build. You can also use any other file as the first argument if you want to have the file open automatically in an editor. When you enter a project file, the IDE looks for an .sln file with the same base name as the project file in the parent directory for the project file. If no such .sln file exists, then the IDE looks for a single .sln file that references the project. If no such single .sln file exists, then the IDE creates an unsaved solution with a default .sln file name that has the same base name as the project file.
+* **Project**: Specifies the project to build, clean, or deploy.
 * **Configuration**: Build configuration. Eg. 'Release'
 * **Platform**: Build platform; only applied when a build configuration is specified. Leave blank for solution/project default.
 * **Visual Studio Version"**: A specific version of Visual Studio that should be used for this build (in case of multiple versions present on the build server).
@@ -19,6 +20,7 @@ The desired Visual Studio version needs to be present on your build server.
 
 ## Release notes
 
+* 2.0.0 - Updated Task Library to v0.11.0. Updated VSSetup library to v2.2.5. Added the support for VS2019. Added extra Project filed/parameter. Solution parameter now supports wildcards [#1](https://github.com/mmajcica/DevEnvBuild/issues/1).
 * 1.0.2 - Minor improvements on the extension. No task changes
 * 1.0.1 - Initial Release
 

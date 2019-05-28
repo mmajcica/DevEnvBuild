@@ -2,7 +2,7 @@
   "id": "ea543240-b4a8-11e5-8761-bb4cd4a06cfc",
   "name": "DevEnvBuild",
   "friendlyName": "DevEnv build (Visual Studio)",
-  "description": "Build a project via the visual studio command-line invocation, devenv.cmd",
+  "description": "Build a project via the visual studio command-line invocation, devenv.cmd. Used for building eg. SSIS projects.",
   "author": "Mario Majcica",
   "helpMarkDown": "Build your project via the visual studio command-line invocation, devenv.cmd",
   "category": "Build",
@@ -13,20 +13,28 @@
     "visualstudio"
   ],
   "version": {
-    "Major": "1",
-    "Minor": "2",
-    "Patch": "0"
+    "Major": "2",
+    "Minor": "0",
+    "Patch": "3"
   },
   "minimumAgentVersion": "1.95.0",
-  "instanceNameFormat": "Build project: $(project)",
+  "instanceNameFormat": "Build solution with DevEnv: $(solution)",
   "inputs": [
+    {
+      "name": "solution",
+      "type": "filePath",
+      "label": "Solution / Project",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Solution or Project to build. You can also use any other file as the first argument if you want to have the file open automatically in an editor. When you enter a project file, the IDE looks for an .sln file with the same base name as the project file in the parent directory for the project file. If no such .sln file exists, then the IDE looks for a single .sln file that references the project. If no such single .sln file exists, then the IDE creates an unsaved solution with a default .sln file name that has the same base name as the project file."
+    },
     {
       "name": "project",
       "type": "filePath",
       "label": "Project",
       "defaultValue": "",
-      "required": true,
-      "helpMarkDown": "Project to build"
+      "required": false,
+      "helpMarkDown": "Specifies the project to build, clean, or deploy."
     },
     {
       "name": "buildCfg",
@@ -52,6 +60,7 @@
       "defaultValue": "latest",
       "options": {
         "latest": "Latest",
+        "16.0": "Visual Studio 2019",
         "15.0": "Visual Studio 2017",
         "14.0": "Visual Studio 2015",
         "12.0": "Visual Studio 2013",

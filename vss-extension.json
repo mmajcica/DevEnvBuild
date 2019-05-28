@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "extensionId": "devenv-build",
   "name": "Build with devenv (Visual Studio)",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "publisher": "mmajcica",
   "description": "Build a project using devenv.com",
   "public": false,
@@ -14,7 +14,7 @@
     "large": "images/logo-large.png"
   },
   "categories": [
-    "Build and release"
+    "Azure Pipelines"
   ],
   "tags": [
     "build",
