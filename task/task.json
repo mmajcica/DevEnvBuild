@@ -15,7 +15,7 @@
   "version": {
     "Major": "2",
     "Minor": "0",
-    "Patch": "3"
+    "Patch": "4"
   },
   "minimumAgentVersion": "1.95.0",
   "instanceNameFormat": "Build solution with DevEnv: $(solution)",
@@ -26,7 +26,7 @@
       "label": "Solution / Project",
       "defaultValue": "",
       "required": true,
-      "helpMarkDown": "Solution or Project to build. You can also use any other file as the first argument if you want to have the file open automatically in an editor. When you enter a project file, the IDE looks for an .sln file with the same base name as the project file in the parent directory for the project file. If no such .sln file exists, then the IDE looks for a single .sln file that references the project. If no such single .sln file exists, then the IDE creates an unsaved solution with a default .sln file name that has the same base name as the project file."
+      "helpMarkDown": "Solution or Project to build. When you enter a project file, the IDE looks for an .sln file with the same base name as the project file in the parent directory for the project file. If no such .sln file exists, then the IDE looks for a single .sln file that references the project. If no such single .sln file exists, then the IDE creates an unsaved solution with a default .sln file name that has the same base name as the project file."
     },
     {
       "name": "project",

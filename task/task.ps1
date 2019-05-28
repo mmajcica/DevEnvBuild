@@ -16,9 +16,10 @@ try {
 
     $solution = Get-SingleFile -pattern $solution
 
-	$sourcesFolder = $env:BUILD_SOURCESDIRECTORY
-
-	if ($project -eq $sourcesFolder) {
+	if ($project -eq $env:BUILD_SOURCESDIRECTORY) {
+        # In case param is not supplied, AzDO will initialize all fields
+        # of type filePath to BUILD_SOURCESDIRECTORY value.
+        # As the script logic assumes this to be empty, I reset the value
 		$project = ""
 	}
 

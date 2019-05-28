@@ -10,7 +10,7 @@ The desired Visual Studio version needs to be present on your build server.
 
 ### The different parameters of the task are explained below
 
-* **Solution / Project**: Solution or Project to build. You can also use any other file as the first argument if you want to have the file open automatically in an editor. When you enter a project file, the IDE looks for an .sln file with the same base name as the project file in the parent directory for the project file. If no such .sln file exists, then the IDE looks for a single .sln file that references the project. If no such single .sln file exists, then the IDE creates an unsaved solution with a default .sln file name that has the same base name as the project file.
+* **Solution / Project**: Solution or Project to build. When you enter a project file, the IDE looks for an .sln file with the same base name as the project file in the parent directory for the project file. If no such .sln file exists, then the IDE looks for a single .sln file that references the project. If no such single .sln file exists, then the IDE creates an unsaved solution with a default .sln file name that has the same base name as the project file.
 * **Project**: Specifies the project to build, clean, or deploy.
 * **Configuration**: Build configuration. Eg. 'Release'
 * **Platform**: Build platform; only applied when a build configuration is specified. Leave blank for solution/project default.
