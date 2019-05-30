@@ -4,6 +4,8 @@
 
 This extension will add a build task in your TFS/VSTS instance that will allow you to build your projects using DevEnv.com (Visual Studio). Most of the .Net projects are built by MSBuild and there are out of the box tasks that will allow you to do so. However, some project types, as Integration Services Project can only be built with Visual Studio as they are not based on MSBuild.
 
+You can read more about this extension in the post [Building Visual Studio projects with DevEnv.com](http://blog.majcica.com/2019/05/30/building-visual-studio-projects-with-devenv-com/) and get some insights in practical usage of it in the post [Deploy SSIS packages from TFS/VSTS Build/Release](http://blog.majcica.com/2018/04/25/deploy-ssis-packages-from-tfs-vsts-build-release/).
+
 ## Requirements
 
 The desired Visual Studio version needs to be present on your build server.

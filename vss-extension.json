@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "extensionId": "devenv-build",
   "name": "Build with devenv (Visual Studio)",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "publisher": "mmajcica",
   "description": "Build a project using devenv.com",
   "public": false,
