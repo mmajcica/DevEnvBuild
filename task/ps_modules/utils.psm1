@@ -7,6 +7,11 @@ function Get-VSPath {
     PROCESS {
         Trace-VstsEnteringInvocation $MyInvocation
         try {
+            if ($Version -eq "17.0" -and
+                ($instance = Get-VSSetupInstance | Select-VSSetupInstance -Version '[17.0,)') -and
+                $instance.installationPath) {
+                return $instance.installationPath
+            }
             if ($Version -eq "16.0" -and
                 ($instance = Get-VSSetupInstance | Select-VSSetupInstance -Version '[16.0,)') -and
                 $instance.installationPath) {
@@ -17,11 +22,6 @@ function Get-VSPath {
                 ($instance = Get-VSSetupInstance | Select-VSSetupInstance -Version '[15.0,16.0)') -and
                 $instance.installationPath) {
                 return $instance.installationPath
-            }
-
-            # Fallback to searching for an older install.
-            if ($path = (Get-ItemProperty -LiteralPath "HKLM:\SOFTWARE\WOW6432Node\Microsoft\VisualStudio\$Version" -Name 'ShellFolder' -ErrorAction Ignore).ShellFolder) {
-                return $path
             }
         }
         finally {
@@ -38,7 +38,7 @@ function Select-VSVersion {
     Trace-VstsEnteringInvocation $MyInvocation
     try {
         $specificVersion = $PreferredVersion -and $PreferredVersion -ne 'latest'
-        $versions = '16.0', '15.0', '14.0', '12.0', '11.0', '10.0' | Where-Object { $_ -ne $PreferredVersion }
+        $versions = '17.0', '16.0', '15.0' | Where-Object { $_ -ne $PreferredVersion }
 
         # Look for a specific version of Visual Studio.
         if ($specificVersion) {

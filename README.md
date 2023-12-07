@@ -22,6 +22,7 @@ The desired Visual Studio version needs to be present on your build server.
 
 ## Release notes
 
+* 2.0.4 - Added support for VS2022. Updated dependencies. Removed support for VS2015 and below versions. 
 * 2.0.3 - Updated Task Library to v0.11.0. Updated VSSetup library to v2.2.5. Added the support for VS2019. Added extra Project filed/parameter. Solution parameter now supports wildcards [#1](https://github.com/mmajcica/DevEnvBuild/issues/1).
 * 1.0.2 - Minor improvements on the extension. No task changes
 * 1.0.1 - Initial Release
